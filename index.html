@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Greeting Card for My Love</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #fffbea;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .card {
+      background: #ffffff;
+      border-radius: 10px;
+      padding: 30px;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      max-width: 400px;
+      animation: fadeIn 1.5s;
+    }
+
+    .heart {
+      font-size: 50px;
+    }
+
+    .message {
+      font-size: 1.2em;
+      color: #333;
+      margin: 15px 0;
+    }
+
+    .button {
+      background-color: #ffeb3b;
+      color: #333;
+      border: none;
+      padding: 15px 20px;
+      font-size: 1em;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    .button:hover {
+      transform: scale(1.1);
+    }
+
+    .popup {
+      display: none;
+      background-color: rgba(0, 0, 0, 0.5);
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .popup-content {
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      text-align: center;
+      animation: popUp 0.5s ease;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes popUp {
+      from {
+        transform: scale(0);
+      }
+
+      to {
+        transform: scale(1);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="card">
+    <div class="heart">💛💛💛</div>
+    <div class="message">Nov 29, an unforgettable day with you purusha!<br>I feel safe, loved, and happy when I'm with you.<br>You are my gem 💛</div>
+    <button class="button" onclick="showPopup()">Click Here 💛</button>
+  </div>
+
+  <div class="popup" id="popup">
+    <div class="popup-content">
+      <div class="heart">💛💛💛</div>
+      <div class="message">Thank you for being in my life!💛<br> I'll always support you and love you forever Venamavana..💛</div>
+      <button class="button" onclick="closePopup()">Close</button>
+    </div>
+  </div>
+
+  <script>
+    function showPopup() {
+      document.getElementById('popup').style.display = 'flex';
+    }
+
+    function closePopup() {
+      document.getElementById('popup').style.display = 'none';
+    }
+  </script>
+</body>
+
+</html>
